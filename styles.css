@@ -851,7 +851,7 @@ ol {
     order: initial;
     text-align: center;
     margin-left: 0;
-    margin-inline: 0;
+    margin-inline: auto;
   }
 
   .leader-row:nth-child(even) .leader-copy p:not(.role) {
@@ -876,14 +876,28 @@ ol {
   }
 
   .leader-copy {
-    max-width: 34rem;
+    width: min(100%, 320px);
+    max-width: 320px;
+    margin-inline: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leader-copy .role,
+  .leader-copy h3,
+  .leader-copy p {
     width: 100%;
+    max-width: 100%;
     text-align: center;
     margin-inline: auto;
   }
 
   .leader-copy p:not(.role) {
-    margin-inline: auto;
+    text-align: center;
+    text-wrap: balance;
+    hyphens: manual;
   }
 
   .section-intro {
@@ -1005,6 +1019,11 @@ ol {
   }
 
   .leader-media {
+    width: min(100%, 280px);
+    max-width: 280px;
+  }
+
+  .leader-copy {
     width: min(100%, 280px);
     max-width: 280px;
   }
