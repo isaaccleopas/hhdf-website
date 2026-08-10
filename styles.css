@@ -746,6 +746,9 @@ ol {
     var(--white);
   border: 1px solid rgba(0, 128, 0, 0.12);
   max-width: 48rem;
+  margin-inline: auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .partner-panel p:not(.eyebrow) {
@@ -839,29 +842,48 @@ ol {
   .leader-row,
   .leader-row:nth-child(even) {
     grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
   }
 
   .leader-row:nth-child(even) .leader-media,
   .leader-row:nth-child(even) .leader-copy {
     order: initial;
-    text-align: left;
+    text-align: center;
     margin-left: 0;
     margin-inline: 0;
   }
 
   .leader-row:nth-child(even) .leader-copy p:not(.role) {
     margin-left: 0;
-    margin-inline: 0;
+    margin-inline: auto;
   }
 
   .leader-media {
+    width: min(100%, 320px);
     max-width: 320px;
     margin-inline: auto;
   }
 
-  .leader-copy {
-    max-width: none;
+  .leader-media img,
+  .leader-photo {
     width: 100%;
+    box-shadow: var(--shadow);
+  }
+
+  .leader-photo.placeholder {
+    border-style: solid;
+  }
+
+  .leader-copy {
+    max-width: 34rem;
+    width: 100%;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .leader-copy p:not(.role) {
+    margin-inline: auto;
   }
 
   .section-intro {
@@ -870,6 +892,37 @@ ol {
 
   .program {
     padding-inline: 0;
+  }
+
+  .partner-panel {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .partner-panel h2,
+  .partner-panel .eyebrow,
+  .partner-panel p {
+    text-align: center;
+    max-width: none;
+  }
+
+  .partner-panel .btn {
+    width: min(100%, 20rem);
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-brand,
+  .footer-meta,
+  .footer-copy {
+    text-align: center;
   }
 }
 
@@ -939,12 +992,21 @@ ol {
   }
 
   .partner-panel {
-    padding: 1.5rem 0;
-    margin-inline: 0;
+    padding: 1.5rem 1.25rem;
+    margin-inline: auto;
     max-width: none;
-    border-radius: 0;
-    border-left: 0;
-    border-right: 0;
+    width: 100%;
+    border-radius: var(--radius);
+    border: 1px solid rgba(0, 128, 0, 0.12);
+  }
+
+  .partner-panel .btn {
+    width: 100%;
+  }
+
+  .leader-media {
+    width: min(100%, 280px);
+    max-width: 280px;
   }
 
   .program {
