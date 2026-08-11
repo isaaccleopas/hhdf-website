@@ -233,6 +233,10 @@ ol {
   transition: color 0.2s ease;
 }
 
+.site-nav a[hidden] {
+  display: none !important;
+}
+
 .site-nav a:hover,
 .site-nav a:focus-visible {
   color: var(--brand);
@@ -586,25 +590,36 @@ ol {
   margin: 0;
 }
 
-/* Upcoming programs */
-.upcoming-feature {
-  max-width: 48rem;
-  margin-inline: auto;
-  padding: clamp(1.6rem, 4vw, 2.25rem);
+/* Event cards (upcoming + recent) */
+.event-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.event-card {
+  padding: 1.5rem 1.35rem 1.6rem;
   background: var(--white);
   border: 1px solid var(--line);
   border-top: 3px solid var(--brand);
 }
 
-.upcoming-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.25rem;
-  margin-bottom: 0.85rem;
+.event-card:nth-child(2) {
+  border-top-color: var(--accent);
 }
 
-.upcoming-date,
-.upcoming-place {
+.event-card:nth-child(3) {
+  border-top-color: var(--maroon);
+}
+
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.event-date,
+.event-place {
   margin: 0;
   font-size: 0.78rem;
   font-weight: 600;
@@ -613,38 +628,38 @@ ol {
   color: var(--brand);
 }
 
-.upcoming-place {
+.event-place {
   color: var(--accent-deep);
 }
 
-.upcoming-feature h3 {
-  font-size: clamp(1.45rem, 2.6vw, 2rem);
+.event-card h3 {
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
   margin-bottom: 0.4rem;
 }
 
-.upcoming-theme {
+.event-theme {
   color: var(--ink);
   font-weight: 600;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.75rem;
 }
 
-.upcoming-feature p {
+.event-card p {
   color: var(--ink-soft);
 }
 
-.upcoming-points {
+.event-points {
   display: grid;
-  gap: 0.45rem;
-  margin: 1rem 0 1.4rem;
+  gap: 0.4rem;
+  margin: 0.9rem 0 1.2rem;
 }
 
-.upcoming-points li {
+.event-points li {
   position: relative;
-  padding-left: 1.2rem;
+  padding-left: 1.15rem;
   color: var(--ink-soft);
 }
 
-.upcoming-points li::before {
+.event-points li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -653,6 +668,26 @@ ol {
   height: 0.45rem;
   border-radius: 50%;
   background: var(--brand);
+}
+
+.event-card .btn {
+  width: 100%;
+}
+
+@media (min-width: 761px) {
+  .event-grid:has(> :only-child) {
+    grid-template-columns: minmax(0, 34rem);
+    justify-content: center;
+  }
+
+  .event-grid:has(> :nth-child(2):last-child) {
+    grid-template-columns: repeat(2, minmax(0, 26rem));
+    justify-content: center;
+  }
+
+  .event-grid:has(> :nth-child(3)) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 /* Approach */

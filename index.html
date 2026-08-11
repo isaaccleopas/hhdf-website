@@ -48,7 +48,8 @@
         <nav class="site-nav" id="site-nav" data-nav>
           <a href="#about">About</a>
           <a href="#programs">Programs</a>
-          <a href="#upcoming">Upcoming</a>
+          <a href="#upcoming" data-upcoming-nav>Upcoming</a>
+          <a href="#recent" data-recent-nav hidden>Recent</a>
           <a href="#leadership">Leadership</a>
           <a href="#partner" class="nav-cta">Partner</a>
         </nav>
@@ -265,42 +266,54 @@
         </div>
       </section>
 
-      <section class="section upcoming" id="upcoming">
+      <section class="section events" id="upcoming" data-upcoming>
         <div class="container">
           <div class="section-intro centered reveal">
             <p class="eyebrow">Upcoming programs</p>
             <h2>Dates, trainings, and gatherings on the HHDF calendar.</h2>
           </div>
 
-          <article class="upcoming-feature reveal">
-            <div class="upcoming-meta">
-              <p class="upcoming-date">21 August 2026</p>
-              <p class="upcoming-place">Gombe State, Nigeria</p>
-            </div>
-            <h3>Bible &amp; Hope Outreach</h3>
-            <p class="upcoming-theme">
-              Theme: “Share the Hope Found in Jesus Christ”
-            </p>
-            <p>
-              An outreach to share the Gospel, distribute Bibles and Christian
-              literature, and offer prayer, evangelism, and discipleship
-              follow-up—especially for people with little access to Scripture.
-            </p>
-            <ul class="upcoming-points">
-              <li>Bible and Christian literature distribution</li>
-              <li>Evangelism and Gospel sharing</li>
-              <li>Prayer and spiritual encouragement</li>
-              <li>Discipleship and follow-up</li>
-            </ul>
-            <a
-              class="btn btn-primary"
-              href="https://wa.me/2349051558917"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Ask about this outreach
-            </a>
-          </article>
+          <div class="event-grid" data-upcoming-grid>
+            <article class="event-card reveal" data-date="2026-08-21">
+              <div class="event-meta">
+                <p class="event-date">21 August 2026</p>
+                <p class="event-place">Gombe State, Nigeria</p>
+              </div>
+              <h3>Bible &amp; Hope Outreach</h3>
+              <p class="event-theme">
+                Theme: “Share the Hope Found in Jesus Christ”
+              </p>
+              <p>
+                An outreach to share the Gospel, distribute Bibles and Christian
+                literature, and offer prayer, evangelism, and discipleship
+                follow-up—especially for people with little access to Scripture.
+              </p>
+              <ul class="event-points">
+                <li>Bible and Christian literature distribution</li>
+                <li>Evangelism and Gospel sharing</li>
+                <li>Prayer and spiritual encouragement</li>
+                <li>Discipleship and follow-up</li>
+              </ul>
+              <a
+                class="btn btn-primary"
+                href="https://wa.me/2349051558917"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ask about this outreach
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section events" id="recent" data-recent hidden>
+        <div class="container">
+          <div class="section-intro centered reveal">
+            <p class="eyebrow">Recent events</p>
+            <h2>Outreach and programs HHDF has recently completed.</h2>
+          </div>
+          <div class="event-grid" data-recent-grid></div>
         </div>
       </section>
 
