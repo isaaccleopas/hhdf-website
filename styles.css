@@ -70,9 +70,12 @@ h3 {
 
 p {
   margin: 0 0 1rem;
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
+  text-align: left;
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-break: normal;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
 }
 
 p:last-child {
@@ -86,7 +89,8 @@ p:last-child {
 .footer-meta,
 .footer-copy {
   text-align: inherit;
-  hyphens: manual;
+  hyphens: none;
+  -webkit-hyphens: none;
 }
 
 ul,
@@ -421,7 +425,7 @@ ol {
   line-height: 1.7;
   color: rgba(255, 253, 249, 0.9);
   margin: 0 0 1.75rem;
-  text-align: justify;
+  text-align: left;
 }
 
 .hero-actions {
@@ -614,7 +618,7 @@ ol {
   padding: 1rem 1rem 1rem 2.4rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
   font-size: 1.05rem;
-  text-align: justify;
+  text-align: left;
 }
 
 .approach-list li::before {
@@ -664,6 +668,7 @@ ol {
 
 .leader-row:nth-child(even) .leader-copy p:not(.role) {
   margin-left: auto;
+  text-align: right;
 }
 
 .leader-media {
@@ -903,8 +908,9 @@ ol {
 
   .leader-copy p:not(.role) {
     text-align: center;
-    text-wrap: balance;
-    hyphens: manual;
+    text-wrap: pretty;
+    hyphens: none;
+    -webkit-hyphens: none;
   }
 
   .section-intro {
