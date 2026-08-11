@@ -586,6 +586,47 @@ ol {
   margin: 0;
 }
 
+/* Upcoming programs */
+.upcoming-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.upcoming-card {
+  padding: 1.5rem 1.35rem 1.6rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--brand);
+}
+
+.upcoming-card:nth-child(2) {
+  border-top-color: var(--accent);
+}
+
+.upcoming-card:nth-child(3) {
+  border-top-color: var(--maroon);
+}
+
+.upcoming-date {
+  margin: 0 0 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+.upcoming-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.55rem;
+}
+
+.upcoming-card p {
+  color: var(--ink-soft);
+  margin: 0;
+}
+
 /* Approach */
 .approach {
   background:
@@ -843,7 +884,8 @@ ol {
     grid-template-columns: 1fr;
   }
 
-  .program-stack {
+  .program-stack,
+  .upcoming-grid {
     grid-template-columns: 1fr;
   }
 
