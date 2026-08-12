@@ -4,11 +4,9 @@ Static website for HHDF, based on the foundation’s About Us document.
 
 ## Live preview
 
-Primary URL (GitHub Pages):  
-https://isaaccleopas.github.io/hhdf-website/
+Deployment is **paused** (GitHub Pages disabled).
 
-Backup URL (use this if GitHub Pages is blocked on a network):  
-https://raw.githack.com/isaaccleopas/hhdf-website/main/index.html
+To preview locally, run the Elixir server below and open [http://localhost:4000](http://localhost:4000).
 
 Repository: https://github.com/isaaccleopas/hhdf-website
 
